@@ -1,0 +1,41 @@
+/*****************************************************/
+/********* Smaller version for an example ************/
+/*****************************************************/
+#container {
+    width: 554px;
+}
+.top-line {
+    width: 395px;
+}
+.tabs-line {
+    width: 394px;
+}
+.tabs-navigation li a {
+    margin: 0 19px;
+}
+.right-conte {
+    width: 365px;
+}
+.form-horizontal{
+    width: 335px;
+}
+.grid-view {
+    width: 340px;
+}
+.label-control, .label-small {
+    width: 116px;
+}
+.form-horizontal input.input-control[type=text],
+.form-horizontal input.input-control[type=password] {
+    width: 200px;
+}
+.form-horizontal input.big-control {
+    width: 200px;
+}
+.form-group .text-danger {
+    margin-left: 124px;
+}
+.btn-control {
+    margin: 0px 122px;
+    min-width: 200px;
+}

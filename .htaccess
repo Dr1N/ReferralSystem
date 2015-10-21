@@ -1,0 +1,26 @@
+RewriteEngine on
+Options +FollowSymlinks
+RewriteBase /referral_system/
+
+#RewriteRule ^svn/trunc$ svn/trunc [L]
+RewriteRule ^phpmyadmin/(.*)$ phpmyadmin/$1 [L]
+RewriteRule ^assets/(.*)$ assets/$1 [L]
+RewriteRule ^css/(.*)$ css/$1 [L]
+RewriteRule ^images/(.*)$ images/$1 [L]
+RewriteRule ^js/(.*)$ js/$1 [L]
+RewriteRule ^fonts/(.*)$ fonts/$1 [L]
+RewriteRule ^themes/(.*)$ themes/$1 [L]
+RewriteRule ^uploads/(.*)$ uploads/$1 [L]
+RewriteRule ^(.*)\.php$ - [L,QSA]
+
+RewriteRule ^referral_system/(.*)* - [L]
+
+# if request is for the admin area forward it to admin.php
+RewriteRule ^admin(.*)$ admin.php [L]
+
+# if request is for the track area forward it to track.php
+RewriteRule ^track(.*)$ track.php [L]
+
+# otherwise forward it to index.php
+RewriteCond %{REQUEST_URI} !(.*)\.(.*)
+RewriteRule ^(.*)$ index.php [L,QSA]
